@@ -1,0 +1,23 @@
+{
+  "name" : "blueblazeassociates/simple-page-ordering",
+  "description" : "Order your pages and other hierarchical post types with simple drag and drop right from the standard page list. ",
+  "type" : "wordpress-plugin",
+  "homepage" : "https://wordpress.org/plugins/simple-page-ordering/",
+  "license" : "GPL-2.0+",
+  "keywords" : [
+    "admin",
+    "AJAX",
+    "drag-and-drop",
+    "hierarchical",
+    "manage",
+    "menu_order",
+    "order",
+    "ordering",
+    "page",
+    "pages",
+    "re-order"
+  ],
+  "replace" : {
+    "wpackagist-plugin/simple-page-ordering" : ">=2.2.4"
+  }
+}
