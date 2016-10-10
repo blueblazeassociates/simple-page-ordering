@@ -1,9 +1,20 @@
 {
-  "name" : "blueblazeassociates/simple-page-ordering",
-  "description" : "Order your pages and other hierarchical post types with simple drag and drop right from the standard page list. ",
-  "type" : "wordpress-plugin",
-  "homepage" : "https://wordpress.org/plugins/simple-page-ordering/",
-  "license" : "GPL-2.0+",
+  "name"        : "blueblazeassociates/simple-page-ordering",
+  "description" : "Simple Page Ordering.  Order your pages and other hierarchical post types with simple drag and drop right from the standard page list.",
+  "type"        : "wordpress-plugin",
+  "homepage"    : "https://github.com/blueblazeassociates/simple-page-ordering",
+  "license"     : "GPL-2.0+",
+  "authors" : [{
+      "name"     : "10up",
+      "homepage" : "https://10up.com/plugins/simple-page-ordering-wordpress/",
+      "role"     : "Author/Creator"
+    }, {
+      "name"     : "Ed Gifford",
+      "homepage" : "http://www.blueblazeassociates.com",
+      "role"     : "Developer",
+      "email"    : "egifford@blueblazeassociates.com"
+    }
+  ],
   "keywords" : [
     "admin",
     "AJAX",
@@ -18,6 +29,12 @@
     "re-order"
   ],
   "replace" : {
-    "wpackagist-plugin/simple-page-ordering" : ">=2.2.4"
+    "wpackagist-plugin/simple-page-ordering" : "2.2.2"
+  },
+  "require" : {
+    "php" : ">=5.6.24" 
+  },
+  "config" : {
+    "php" : "5.6.*"
   }
 }
