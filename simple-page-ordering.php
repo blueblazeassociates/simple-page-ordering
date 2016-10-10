@@ -1,15 +1,27 @@
 <?php
+/**
+ * Post Featured Font Icon
+ *
+ * @author  Blue Blaze Associates
+ * @license GPL-2.0+
+ * @link    https://github.com/blueblazeassociates/simple-page-ordering
+ */
+
 /*
-Plugin Name: Simple Page Ordering
-Plugin URI: http://10up.com/plugins/simple-page-ordering-wordpress/
-Description: Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the "Help" tab on the Pages screen.
-Version: 2.2.2
-Author: Jake Goldman, 10up
-Author URI: http://10up.com
-License: GPLv2 or later
-Text Domain: simple-page-ordering
-Domain Path: /localization/
-*/
+ * Plugin Name:       Simple Page Ordering
+ * Plugin URI:        http://10up.com/plugins/simple-page-ordering-wordpress/
+ * Description:       Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the "Help" tab on the Pages screen.
+ * Version:           2.2.2
+ * Author:            Jake Goldman, 10up
+ * Author URI:        http://10up.com
+ * License:           GPLv2 or later
+ *
+ * Text Domain:       simple-page-ordering
+ * Domain Path:       /localization/
+ *
+ * GitHub Plugin URI: https://github.com/blueblazeassociates/simple-page-ordering
+ * GitHub Branch:     blueblaze
+ */
 
 if ( ! class_exists( 'Simple_Page_Ordering' ) ) :
 
@@ -50,7 +62,7 @@ class Simple_Page_Ordering {
 	 * Loads the plugin textdomain
 	 */
 	public static function load_textdomain() {
-		load_plugin_textdomain( 'simple-page-ordering', false, dirname( plugin_basename( __FILE__ ) ) . '/localization/' ); 
+		load_plugin_textdomain( 'simple-page-ordering', false, dirname( plugin_basename( __FILE__ ) ) . '/localization/' );
 	}
 
 	/**
@@ -277,7 +289,7 @@ class Simple_Page_Ordering {
 		$query_string = esc_url( remove_query_arg(array( 'orderby', 'order' )) );
 		$query_string = add_query_arg( 'orderby', urlencode('menu_order title'), $query_string );
 		$views['byorder'] = sprintf('<a href="%s" class="%s">%s</a>', $query_string, $class, __("Sort by Order", 'simple-page-ordering'));
-			
+
 		return $views;
 	}
 
