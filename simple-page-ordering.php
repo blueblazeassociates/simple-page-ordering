@@ -15,8 +15,8 @@
  * Author:            Jake Goldman, 10up
  * Author URI:        http://10up.com
  * License:           GPLv2 or later
- * Text Domain: simple-page-ordering
- * Domain Path: /localization/
+ * Text Domain:       simple-page-ordering
+ * Domain Path:       /localization/
  * GitHub Plugin URI: https://github.com/blueblazeassociates/simple-page-ordering
  * GitHub Branch:     blueblaze
  */
