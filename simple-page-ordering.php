@@ -1,6 +1,6 @@
 <?php
 /**
- * Post Featured Font Icon
+ * Simple Page Ordering
  *
  * @author  Blue Blaze Associates
  * @license GPL-2.0+
