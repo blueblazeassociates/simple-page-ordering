@@ -11,13 +11,13 @@
  * Plugin Name:       Simple Page Ordering
  * Plugin URI:        http://10up.com/plugins/simple-page-ordering-wordpress/
  * Description:       Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the "Help" tab on the Pages screen.
- * Version:           2.2.3
+ * Version:           2.2.4
  * Author:            Jake Goldman, 10up
  * Author URI:        http://10up.com
  * License:           GPLv2 or later
  *
- * Text Domain:       simple-page-ordering
- * Domain Path:       /localization/
+ * Text Domain: simple-page-ordering
+ * Domain Path: /localization/
  *
  * GitHub Plugin URI: https://github.com/blueblazeassociates/simple-page-ordering
  * GitHub Branch:     blueblaze
@@ -286,8 +286,11 @@ class Simple_Page_Ordering {
 	 */
 	public static function sort_by_order_link( $views ) {
 		$class = ( get_query_var('orderby') == 'menu_order title' ) ? 'current' : '';
-		$query_string = esc_url( remove_query_arg(array( 'orderby', 'order' )) );
-		$query_string = add_query_arg( 'orderby', urlencode('menu_order title'), $query_string );
+		$query_string = esc_url( remove_query_arg( array( 'orderby', 'order' ) ) );
+		if ( ! is_post_type_hierarchical( get_post_type() ) ) {
+			$query_string = add_query_arg( 'orderby', 'menu_order title', $query_string );
+			$query_string = add_query_arg( 'order', 'asc', $query_string );
+		}
 		$views['byorder'] = sprintf('<a href="%s" class="%s">%s</a>', $query_string, $class, __("Sort by Order", 'simple-page-ordering'));
 
 		return $views;
